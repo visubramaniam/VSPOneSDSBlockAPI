@@ -1,0 +1,5216 @@
+{
+	"info": {
+		"_postman_id": "87d41293-69e8-4ec1-b6d7-deedb605f8b7",
+		"name": "VSS Block",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17974464",
+		"_collection_link": "https://planetary-crater-669401.postman.co/workspace/My-Workspace~3e0e527a-c698-4b25-823e-764bb192c3b6/collection/17974464-87d41293-69e8-4ec1-b6d7-deedb605f8b7?action=share&source=collection_link&creator=17974464"
+	},
+	"item": [
+		{
+			"name": "Basic Operations",
+			"item": [
+				{
+					"name": "Get Session Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://192.168.180.30/ConfigurationManager/simple/v1/objects/sessions",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"180",
+								"30"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get License",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/licenses",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get License ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/licenses/{{license}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"licenses",
+								"{{license}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get License Setting",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/license-setting",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"license-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Version",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/configuration/version",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"configuration",
+								"version"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jobs",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/jobs",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jobs Specific",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/jobs/f4246100-ec78-4791-9f79-8d611f025b7f",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"jobs",
+								"f4246100-ec78-4791-9f79-8d611f025b7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Storages",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get License",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/licenses",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get License Settings",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/license-setting",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"license-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event Logs",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/jobs",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply License",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Expect",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keyCode\": \"0OEDWW402K4ZZZC2A7GU2MKLZFOXEVCTAR8P6N4L2J0HYFWDUBSAQ7O41IZGXEVCEWU6EKW6UXM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/licenses",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Snapshot Operations",
+			"item": [
+				{
+					"name": "Delete Snapshot",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"snapshotVolumeId\": \"78025a99-1b5d-42d0-a257-09373fe5d8f3\"\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes/actions/delete-snapshot/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes",
+								"actions",
+								"delete-snapshot",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Snapshot",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Demo@G@D!23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"masterVolumeId\": \"b7582c29-db57-433e-9930-8afd89f1de8e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.181.120/ConfigurationManager/simple/v1/objects/volumes/actions/create-snapshot/invoke",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"181",
+								"120"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes",
+								"actions",
+								"create-snapshot",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Snapshot",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"masterVolumeId\": \"b7582c29-db57-433e-9930-8afd89f1de8e\",\r\n    \"snapshotVolumeId\": \"e91daea3-08f2-457e-bcd0-dece69d73d78\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.181.120/ConfigurationManager/simple/v1/objects/volumes/actions/restore-snapshot/invoke",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"181",
+								"120"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes",
+								"actions",
+								"restore-snapshot",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Snapshot Information",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://tevssb.ecoe.io/ConfigurationManager/simple/v1/objects/volumes/",
+							"protocol": "https",
+							"host": [
+								"tevssb",
+								"ecoe",
+								"io"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server Operations",
+			"item": [
+				{
+					"name": "Get Servers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/servers",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Get Servers",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Get Servers ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/servers/{{serverId}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers",
+								"{{serverId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Create Servers",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serverNickname\": \"iqn.1994-05.com.redhat:4f9f75fac\",\r\n    \"osType\": \"Linux\",\r\n    \"vpsId\": \"system\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Delete Servers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/servers/{{serverId}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers",
+								"{{serverId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Get Servers ID HBAs",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers/5bca8018-4a14-4aa2-ba4a-789ffea4fa35/hbas",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers",
+								"5bca8018-4a14-4aa2-ba4a-789ffea4fa35",
+								"hbas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Add Servers ID HBAs",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"protocol\": \"iSCSI\", \"iscsiName\": \"iqn.1994-05.com.redhat:4f9f75fac\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers/5bca8018-4a14-4aa2-ba4a-789ffea4fa35/hbas",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers",
+								"5bca8018-4a14-4aa2-ba4a-789ffea4fa35",
+								"hbas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Get Servers ID Path",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "citi02",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "Demo@G@D!23",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/servers/{{serverId}}/paths",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers",
+								"{{serverId}}",
+								"paths"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Get Servers ID Delete Path",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "citi02",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "Demo@G@D!23",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/servers/{{serverId}}/paths/fa0e6f04-2009-4c97-9080-e336a3738178,7a32ad93-cfde-4493-83bd-4ad845235ce4",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers",
+								"{{serverId}}",
+								"paths",
+								"fa0e6f04-2009-4c97-9080-e336a3738178,7a32ad93-cfde-4493-83bd-4ad845235ce4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers - Add Servers ID Path",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"hbaId\": \"ef838a5a-4d07-483f-a82e-33a87c86faf8\",\n\"portId\": \"1f1c241e-c9dc-44d8-a028-2219b99f27fc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers/5bca8018-4a14-4aa2-ba4a-789ffea4fa35/paths",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"servers",
+								"5bca8018-4a14-4aa2-ba4a-789ffea4fa35",
+								"paths"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Port Operations",
+			"item": [
+				{
+					"name": "Get Ports",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/ports",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"ports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drive Operation",
+			"item": [
+				{
+					"name": "Get Drives",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/drives",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"drives"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Drive",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{bmserver}}/ConfigurationManager/simple/v1/objects/drives/197b416a-4826-418c-a1d6-7f083695104e/actions/remove/invoke",
+							"protocol": "https",
+							"host": [
+								"{{bmserver}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"drives",
+								"197b416a-4826-418c-a1d6-7f083695104e",
+								"actions",
+								"remove",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suspend Drive Relocation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"keyCode\":\"3PG94PTAZQNCHTKURLRMZFJIO76NXCR6L0FU9O3IXCR6L0FU9O3JXCR50FU9O3IXXD7FRJUVAVP\"}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/protection-domains/d23bfce6-ea31-414e-8795-4c2c89409905/actions/suspend-drive-data-relocation/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"protection-domains",
+								"d23bfce6-ea31-414e-8795-4c2c89409905",
+								"actions",
+								"suspend-drive-data-relocation",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resume Drive Relocatio",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"keyCode\":\"3PG94PTAZQNCHTKURLRMZFJIO76NXCR6L0FU9O3IXCR6L0FU9O3JXCR50FU9O3IXXD7FRJUVAVP\"}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/protection-domains/d23bfce6-ea31-414e-8795-4c2c89409905/actions/suspend-drive-data-relocation/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"protection-domains",
+								"d23bfce6-ea31-414e-8795-4c2c89409905",
+								"actions",
+								"suspend-drive-data-relocation",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pool Operations",
+			"item": [
+				{
+					"name": "Get Pools",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/pools",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"pools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Expand Pool",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"driveIds\": [\n        \"0d543c2b-ab0a-43a5-bd7d-6baf20cb5a67\",\n        \"122a6398-a9db-4ce2-b96a-2ab694b927ca\",\n        \"1453458a-5f70-461e-b694-08e92f16b8cc\",\n        \"3fbe8022-bbfd-4f3c-9f8f-75c3cc82f5f0\",\n        \"40ce747e-c348-4544-ba04-7992ecd5339f\",\n        \"42cf4351-dd10-441c-8b70-c6a7059fba9f\",\n        \"4ffdd7cb-b06f-4a6f-ad5f-e452a4863029\",\n        \"6a704eb4-9d3a-4de5-9e8e-9340d3e586de\",\n        \"6bc091ca-f923-4b89-a2c8-f63162fdfe43\",\n        \"6fa4db5a-b3ce-49c6-b805-83e6cb2032ec\",\n        \"7100141b-845e-4edc-b2a6-53d4a2e471d0\",\n        \"78a33ae1-945b-406b-9cae-f4a8c965fd24\",\n        \"7e6d99ca-0d55-4ba8-b20c-1f9654261c06\",\n        \"819c7d8b-b66a-4a0b-8f20-9bd813126b72\",\n        \"83aff442-3a4f-4e59-bb9c-c4ca36282658\",\n        \"93f532d7-1d01-4d69-b8ed-643d62596fb4\",\n        \"cc8fcb1d-1851-4957-b2ea-3a6235d86d44\",\n        \"d2508635-4eef-4cf4-afba-b3f58d3cb861\",\n        \"df86bfb5-6192-404f-9806-5b46b64f51bb\",\n        \"e3a86ea1-ebac-400d-b02c-b88d6e4bbd25\",\n        \"e8fca8b3-1f86-4ab5-b6a0-c4a3b8b4cf06\",\n        \"e9a57717-c09a-493d-a306-378dfb96dd95\",\n        \"f9f05c41-d4fb-450e-af73-09503fa66ee3\",\n        \"fe624a49-c505-4fa9-9f78-a68340d896dd\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/pools/16b01f77-73fa-4f4d-a24c-3a9cdc4b45a7/actions/expand/invoke",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"pools",
+								"16b01f77-73fa-4f4d-a24c-3a9cdc4b45a7",
+								"actions",
+								"expand",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Storage Node Operations",
+			"item": [
+				{
+					"name": "Get Capacity Balance",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Demo@G@D!23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-node-capacity-settings",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-node-capacity-settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Capacity Balance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"capacityBalancingSetting\" :{ \"isEnabled\": false }}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{bmserver}}/ConfigurationManager/simple/v1/objects/storage-node-capacity-settings/f0b71b7d-774d-4b3b-88da-016df12ad7c5",
+							"protocol": "https",
+							"host": [
+								"{{bmserver}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-node-capacity-settings",
+								"f0b71b7d-774d-4b3b-88da-016df12ad7c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Storage-Nodes",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage-nodes",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-nodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Storage Controllers",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage-nodes",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-nodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Storage Node",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Expect",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "setupUserPassword",
+									"value": "H1t@ch1!",
+									"type": "text"
+								},
+								{
+									"key": "configurationFile",
+									"type": "file",
+									"src": "/Users/vinodsubramaniam/Desktop/hsds1.15/SystemConfigurationFile.csv"
+								},
+								{
+									"key": "Expect",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage-nodes",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-nodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Spare Node",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Expect",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"faultDomainId\": \"f562460a-c0c5-4fa6-b102-2cb6ee1c89bc\",\n    \"controlPortIpv4Address\": \"192.168.183.115\",\n    \"setupUserPassword\": \"H1t@ch1!\",\n    \"bmcName\": \"192.168.183.105\",\n    \"bmcUser\": \"Administrator\",\n    \"bmcPassword\": \"6SS8YPQF\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/spare-nodes",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"spare-nodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Spare Node Copy",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"content-length": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Expect",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/spare-nodes",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"spare-nodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Storage-Nodes Specifc",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-nodes/4bb4aec3-3f5d-4401-a451-49d6f99d635a",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-nodes",
+								"4bb4aec3-3f5d-4401-a451-49d6f99d635a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Storage-Node in Maintenance",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-nodes/029b12f6-a682-4623-8c69-822a791c4e7e/actions/block-for-maintenance/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-nodes",
+								"029b12f6-a682-4623-8c69-822a791c4e7e",
+								"actions",
+								"block-for-maintenance",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Storage-Node from Maintenance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-nodes/029b12f6-a682-4623-8c69-822a791c4e7e/actions/recover/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-nodes",
+								"029b12f6-a682-4623-8c69-822a791c4e7e",
+								"actions",
+								"recover",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Storage-Node from Maintenance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"setupUserPassword\":\"St0r@g3@DP!\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-nodes/{{storage_node}}/actions/replace/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-nodes",
+								"{{storage_node}}",
+								"actions",
+								"replace",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "storage-master-node-primary-flag",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/configuration/storage-master-node-primary-flag",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"configuration",
+								"storage-master-node-primary-flag"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Volume Operations",
+			"item": [
+				{
+					"name": "Get Volumes",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes/43059b3d-797f-44ac-b5ec-e773a45bdd14",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes",
+								"43059b3d-797f-44ac-b5ec-e773a45bdd14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Volume on Storage Controller",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"capacity\":3957320, \"nicknameParam\":{ \"baseName\": \"dbvol1\" },\"poolId\":\"59ce830b-07c7-4dd6-a7ba-9e85c7af4eba\", \"storageControllerId\": \"02381a4c-dafb-4f6b-85d6-f8bce92a428a\" }"
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/volumes",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Volume Server Connections",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"capacity\":3957320, \"nicknameParam\":{ \"baseName\": \"dbvol1\" },\"poolId\":\"59ce830b-07c7-4dd6-a7ba-9e85c7af4eba\", \"storageControllerId\": \"02381a4c-dafb-4f6b-85d6-f8bce92a428a\" }"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Volume",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes/{{volumeId}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes",
+								"{{volumeId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Operations",
+			"item": [
+				{
+					"name": "Get User Groups",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/user-groups",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"user-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Groups",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/user-groups/jpmcusers",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"user-groups",
+								"jpmcusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User Group",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/user-groups",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"user-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get External Authentication Server Settings",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/external-auth-server-setting",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"external-auth-server-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload AD root certificate",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rootCertificate",
+									"type": "file",
+									"src": "/Users/vinodsubramaniam/Desktop/hsds1.15/cacert.pem"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/external-auth-server-root-certificates/primary1/actions/import/invoke",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"external-auth-server-root-certificates",
+								"primary1",
+								"actions",
+								"import",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/users",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Authentication Settings",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/user-auth-setting",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"user-auth-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User to Groups",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"userGroupIds\":[\"SystemAdministrators\"] }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/users/openshift/actions/add-user-group/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users",
+								"openshift",
+								"actions",
+								"add-user-group",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External Authentication Server Set",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isEnabled\": true,\n    \"authProtocol\": \"LDAP\",\n    \"ldapSetting\": {\n        \"mappingMode\": \"Group\",\n        \"primaryLdapServerUrl\": \"ldap://192.168.183.121:636\",\n        \"secondaryLdapServerUrl\": \"\",\n        \"isStartTlsEnabled\": false,\n        \"baseDn\": \"DC=ecoe,DC=local\",\n        \"bindDn\": \"CN=JPMC Service Account,CN=Users,DC=ecoe,DC=local\",\n        \"bindDnPassword\": \"jpmc2024p0c\",\n        \"userIdAttribute\": \"sAMAccountName\",\n        \"userTreeDn\": \"CN=Users,DC=acoe,DC=local\",\n        \"userObjectClass\": \"user\", \n        \"userGroupIdAttribute\": \"sAMAccountName\",\n        \"userGroupTreeDn\": \"CN=te-vssbusers,DC=ecoe,DC=local\",\n        \"userGroupObjectClass\": \"Group\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/external-auth-server-setting",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"external-auth-server-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External Authentication Server Remove",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isEnabled\": true,\n    \"authProtocol\": \"LDAP\",\n    \"ldapSetting\": {\n        \"mappingMode\": \"Group\",\n        \"primaryLdapServerUrl\": \"ldap://192.168.183.121:636\",\n        \"secondaryLdapServerUrl\": \"\",\n        \"isStartTlsEnabled\": false,\n        \"baseDn\": \"DC=ecoe,DC=local\",\n        \"bindDn\": \"CN=JPMC Service Account,CN=Users,DC=ecoe,DC=local\",\n        \"bindDnPassword\": \"jpmc2024p0c\",\n        \"userIdAttribute\": \"sAMAccountName\",\n        \"userTreeDn\": \"CN=Users,DC=acoe,DC=local\",\n        \"userObjectClass\": \"user\", \n        \"userGroupIdAttribute\": \"sAMAccountName\",\n        \"userGroupTreeDn\": \"CN=te-vssbusers,DC=ecoe,DC=local\",\n        \"userGroupObjectClass\": \"Group\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/external-auth-server-setting",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"external-auth-server-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Authentication Server Connectivity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"userGroupIds\":[\"SystemAdministrators\"] }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/users/openshift/actions/add-user-group/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users",
+								"openshift",
+								"actions",
+								"add-user-group",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set User Authentication Settings",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "hsds-admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"passwordComplexitySetting\": {\n        \"minLength\": 4,\n        \"minNumberOfUpperCaseChars\": 0,\n        \"minNumberOfLowerCaseChars\": 0,\n        \"minNumberOfNumerals\": 0,\n        \"minNumberOfSymbols\": 0,\n        \"numberOfPasswordHistory\": 1\n    },\n    \"passwordAgeSetting\": {\n        \"requiresInitialPasswordReset\": false,\n        \"minAgeDays\": 0,\n        \"maxAgeDays\": 0\n    },\n    \"lockoutSetting\": {\n        \"maxAttempts\": 3,\n        \"lockoutSeconds\": 60\n    },\n    \"sessionSetting\": {\n        \"maxLifetimeSeconds\": 86400,\n        \"maxIdleSeconds\": 1800\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/user-auth-setting",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"user-auth-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"userId\":\"FrankHayer\", \"password\":\"unentitledunderproduced71!\", \"userGroupIds\":[\"SystemAdministrators\"] }"
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/users",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/users/{{vpsUser}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users",
+								"{{vpsUser}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change User Password",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Passw0rd!23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"currentPassword\":\"Passw0rd!23\", \"newPassword\":\"St0r@g3@DP!\"}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/users/admin/password",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users",
+								"admin",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Expired User Password",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"currentPassword\":\"hsds-admin\", \"newPassword\":\"H1t@ch1!\"}"
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/users/admin/password",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users",
+								"admin",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VPS Operations",
+			"item": [
+				{
+					"name": "VPS - Get",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/virtual-private-storages",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"virtual-private-storages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "VPS - Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/virtual-private-storages",
+									"protocol": "https",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"ConfigurationManager",
+										"simple",
+										"v1",
+										"objects",
+										"virtual-private-storages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private, no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; style-src 'self' 'unsafe-inline';"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2039"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 Feb 2023 05:58:46 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"31fb40c3-d56c-495d-a70a-d0662e66a4c0\",\n            \"name\": \"CITI_01\",\n            \"upperLimitForNumberOfUserGroups\": 256,\n            \"numberOfUserGroupsCreated\": 1,\n            \"upperLimitForNumberOfUsers\": 256,\n            \"numberOfUsersCreated\": 1,\n            \"upperLimitForNumberOfSessions\": 436,\n            \"numberOfSessionsCreated\": 0,\n            \"upperLimitForNumberOfServers\": 100,\n            \"numberOfServersCreated\": 0,\n            \"upperLimitForNumberOfHbas\": 400,\n            \"numberOfHbasCreated\": 0,\n            \"upperLimitForNumberOfVolumeServerConnections\": 100,\n            \"numberOfVolumeServerConnectionsCreated\": 0,\n            \"volumeSettings\": {\n                \"poolId\": \"be4dba5c-3592-42e8-bf55-637eb1d623aa\",\n                \"upperLimitForNumberOfVolumes\": 50,\n                \"numberOfVolumesCreated\": 1,\n                \"upperLimitForCapacityOfVolumes\": 1000000,\n                \"capacityOfVolumesCreated\": 100,\n                \"upperLimitForCapacityOfSingleVolume\": -1,\n                \"qosParam\": {\n                    \"upperLimitForIopsOfVolume\": -1,\n                    \"upperLimitForTransferRateOfVolume\": -1,\n                    \"upperAlertAllowableTimeOfVolume\": -1\n                }\n            }\n        },\n        {\n            \"id\": \"a439faab-5ae2-4558-adbe-243853774fb0\",\n            \"name\": \"CITI_02\",\n            \"upperLimitForNumberOfUserGroups\": 256,\n            \"numberOfUserGroupsCreated\": 0,\n            \"upperLimitForNumberOfUsers\": 256,\n            \"numberOfUsersCreated\": 0,\n            \"upperLimitForNumberOfSessions\": 436,\n            \"numberOfSessionsCreated\": 0,\n            \"upperLimitForNumberOfServers\": 100,\n            \"numberOfServersCreated\": 0,\n            \"upperLimitForNumberOfHbas\": 400,\n            \"numberOfHbasCreated\": 0,\n            \"upperLimitForNumberOfVolumeServerConnections\": 100,\n            \"numberOfVolumeServerConnectionsCreated\": 0,\n            \"volumeSettings\": {\n                \"poolId\": \"be4dba5c-3592-42e8-bf55-637eb1d623aa\",\n                \"upperLimitForNumberOfVolumes\": 50,\n                \"numberOfVolumesCreated\": 0,\n                \"upperLimitForCapacityOfVolumes\": 1000000,\n                \"capacityOfVolumesCreated\": 0,\n                \"upperLimitForCapacityOfSingleVolume\": -1,\n                \"qosParam\": {\n                    \"upperLimitForIopsOfVolume\": -1,\n                    \"upperLimitForTransferRateOfVolume\": -1,\n                    \"upperAlertAllowableTimeOfVolume\": -1\n                }\n            }\n        }\n    ],\n    \"summaryInformation\": {\n        \"totalCount\": 2,\n        \"totalUpperLimitForNumberOfUserGroups\": 512,\n        \"totalUpperLimitForNumberOfUsers\": 512,\n        \"totalUpperLimitForNumberOfSessions\": 872,\n        \"totalUpperLimitForNumberOfVolumes\": 100,\n        \"totalUpperLimitForCapacityOfVolumes\": 2000000,\n        \"totalUpperLimitForNumberOfServers\": 200,\n        \"totalUpperLimitForNumberOfHbas\": 800,\n        \"totalUpperLimitForNumberOfVolumeServerConnections\": 200\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "VPS - Get Details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/virtual-private-storages/{{vps}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"virtual-private-storages",
+								"{{vps}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VPS - Patch VIPS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"upperLimitForCapacityOfVolumes\": 1000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/virtual-private-storages/{{vps}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"virtual-private-storages",
+								"{{vps}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VPS - Create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"VPS_01\",\r\n    \"upperLimitForNumberOfServers\": 100,\r\n    \"volumeSettings\": [\r\n        {\r\n            \"poolId\": \"{{poolId}}\",\r\n            \"upperLimitForCapacityOfVolumes\": 100,\r\n            \"upperLimitForNumberOfVolumes\": 50,\r\n            \"upperLimitForCapacityOfSingleVolume\": -1,\r\n            \"upperLimitForIopsOfVolume\": -1,\r\n            \"upperLimitForTransferRateOfVolume\": -1,\r\n            \"upperAlertAllowableTimeOfVolume\": -1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/virtual-private-storages",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"virtual-private-storages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VPS - Delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/virtual-private-storages/{{vips}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"virtual-private-storages",
+								"{{vips}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VPS add VPS to user Group",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"scope\": [\r\n        \"system\",\r\n        \"{{vps}}\",\r\n        \"{{vps02}}\"\r\n        ]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/user-groups/{{group}}",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"user-groups",
+								"{{group}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VPS create usergroup for VPS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userGroupId\": \"{{vpsGroup02}}\",\r\n    \"roleNames\": [\r\n        \"VpsSecurity\",\r\n        \"VpsStorage\",\r\n        \"VpsMonitor\"\r\n    ],\r\n    \"vpsId\": \"{{vps02}}\",\r\n    \"scope\": [\r\n        \"{{vps02}}\"\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/user-groups",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"user-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VPS create user for VPS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"userId\":\"{{vpsUsername}}\", \"password\":\"{{vpsPassword}}\", \"userGroupIds\":[\"{{vpsGroup02}}\"] }"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/users",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Volume on VPS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"capacity\":3957320, \"nicknameParam\":{ \"baseName\": \"dbvol1\" },\"poolId\":\"59ce830b-07c7-4dd6-a7ba-9e85c7af4eba\", \"storageControllerId\": \"02381a4c-dafb-4f6b-85d6-f8bce92a428a\" }"
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/volumes",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change VPS admin password",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Passw0rd!23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"currentPassword\":\"Passw0rd!23\", \"newPassword\":\"St0r@g3@DP!\"}"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/users/admin/password",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"users",
+								"admin",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cluster Operations",
+			"item": [
+				{
+					"name": "Get Storage-Controllers",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-controllers",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage-controllers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Software Update File",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage/software-update-file",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage",
+								"software-update-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Fault Sets",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/fault-sets",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"fault-sets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Fault Domains",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/fault-domains",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"fault-domains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Protection Domains",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"volumes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Storage-Cluster ID - for License Information",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Storage-Cluster ID - for License Information Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dump Status",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/dump-status",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"dump-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Dump FILE",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/dump-file/download",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"dump-file",
+								"download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload SystemConfiguration File",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "systemRequirementsFile",
+									"type": "file",
+									"src": "/C:/temp/vssb bm/SystemConfigurationFile.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/system-requirements-file/actions/import/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"system-requirements-file",
+								"actions",
+								"import",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create System Configuration File",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"disabled": true
+							},
+							{
+								"key": "Content-Length",
+								"value": "0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/configuration-file/actions/create/invoke",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"configuration-file",
+								"actions",
+								"create",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download System Configuration File",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"disabled": true
+							},
+							{
+								"key": "Content-Length",
+								"value": "0"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/configuration-file/download",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"configuration-file",
+								"download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Software Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "softwareUpdateFile",
+									"type": "file",
+									"src": "/Users/vinodsubramaniam/Desktop/hsds1.15/hsds-update-01150040-0212.tar"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage/actions/upload-software-update-file/invoke",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage",
+								"actions",
+								"upload-software-update-file",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Software Update File",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage/software-update-file",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage",
+								"software-update-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoke Software Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mode\": \"Non-disruptive\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage/actions/update-software/invoke",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage",
+								"actions",
+								"update-software",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create DUMP file",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/dump-file/actions/create-file/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"dump-file",
+								"actions",
+								"create-file",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer Software Update File",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "multipart/form- data"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "softwareUpdateFile",
+									"value": "@/home/user/update/hsds-update-01050000-2345.tar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage/actions/upload-software-update-file/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage",
+								"actions",
+								"upload-software-update-file",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Software Update File Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "multipart/form- data"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Session {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "softwareUpdateFile",
+									"value": "@/home/user/update/hsds-update-01050000-2345.tar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage/actions/upload-software-update-file/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage",
+								"actions",
+								"upload-software-update-file",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload license Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"jobId\", jsonData.jobId);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Passw0rd!23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Session a53bc157-eb73-44d7-acaa-24e8b6280cb1",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"keyCode\":\"UCN5I5YRZG321NG59OJ7VRDBJC49KV6HS3EP0BMX8JU5GR2DOZAMW7ISJU5GR2DOKWO6LUOPNRG\"}"
+						},
+						"url": {
+							"raw": "https://tevssb.ecoe.io/ConfigurationManager/simple/v1/objects/licenses",
+							"protocol": "https",
+							"host": [
+								"tevssb",
+								"ecoe",
+								"io"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply Software Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "St0r@g3@DP!",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Expect",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"mode\": \"Non-disruptive\" }"
+						},
+						"url": {
+							"raw": "https://{{server}}/ConfigurationManager/simple/v1/objects/storage/actions/update-software/invoke",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"storage",
+								"actions",
+								"update-software",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Encryption Settings",
+			"item": [
+				{
+					"name": "Enable Encryption Environment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isEnabled\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/\nencryption-settings",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"\nencryption-settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Pool Encryption",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "H1t@ch1!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isEnabled\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://192.168.183.121/ConfigurationManager/simple/v1/objects/\nencryption-settings",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"183",
+								"121"
+							],
+							"path": [
+								"ConfigurationManager",
+								"simple",
+								"v1",
+								"objects",
+								"\nencryption-settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload SSL Certificate",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forward  Logs",
+			"item": [
+				{
+					"name": "Forward Event Logs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Forward Audit Logs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "admin"
+		},
+		{
+			"key": "password",
+			"value": "St0r@g3@DP!"
+		},
+		{
+			"key": "user",
+			"value": "jreitz"
+		},
+		{
+			"key": "server",
+			"value": "tevssb.ecoe.io",
+			"type": "string"
+		}
+	]
+}
