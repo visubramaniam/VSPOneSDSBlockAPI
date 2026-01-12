@@ -18,7 +18,7 @@ Replace these variables in the commands below:
 ### Get Session Token
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   "https://192.168.180.30/ConfigurationManager/simple/v1/objects/sessions"
 ```
 
@@ -31,56 +31,56 @@ curl -k -X GET \
 ### Get License
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/licenses"
 ```
 
 ### Get License by ID
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/licenses/{{license}}"
 ```
 
 ### Get License Setting
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/license-setting"
 ```
 
 ### Get Jobs
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/jobs"
 ```
 
 ### Get Specific Job
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/jobs/f4246100-ec78-4791-9f79-8d611f025b7f"
 ```
 
 ### Get Storages
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage"
 ```
 
 ### Get Event Logs
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/jobs"
 ```
 
 ### Apply License
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Expect:" \
   -H "Content-Type: application/json" \
   -d '{
@@ -92,7 +92,7 @@ curl -k -X POST \
 ### Upload License
 ```bash
 curl -k -X POST \
-  -u "admin:Passw0rd!23" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{"keyCode":"UCN5I5YRZG321NG59OJ7VRDBJC49KV6HS3EP0BMX8JU5GR2DOZAMW7ISJU5GR2DOKWO6LUOPNRG"}' \
@@ -102,7 +102,7 @@ curl -k -X POST \
 ### Get Software Update File Details
 ```bash
 curl -k -X POST \
-  -u "admin:password" \
+  -u "{{username}}:{{password}}" \
   -H "content-type: multipart/form-data" \
   -H "Expect:" \
   -H "Authorization: Session {{token}}" \
@@ -113,7 +113,7 @@ curl -k -X POST \
 ### Apply Software Update
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{ "mode": "Non-disruptive" }' \
@@ -127,7 +127,7 @@ curl -k -X POST \
 ### Create Snapshot
 ```bash
 curl -k -X POST \
-  -u "admin:Demo@G@D!23" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -d '{
     "masterVolumeId": "b7582c29-db57-433e-9930-8afd89f1de8e"
@@ -138,7 +138,7 @@ curl -k -X POST \
 ### Delete Snapshot
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
@@ -150,7 +150,7 @@ curl -k -X POST \
 ### Restore Snapshot
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -d '{
     "masterVolumeId": "b7582c29-db57-433e-9930-8afd89f1de8e",
@@ -162,7 +162,7 @@ curl -k -X POST \
 ### Get Snapshot Information
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   "https://tevssb.ecoe.io/ConfigurationManager/simple/v1/objects/volumes/"
@@ -182,7 +182,7 @@ curl -k -X GET \
 ### Get Servers (with Basic Auth)
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers"
 ```
 
@@ -196,7 +196,7 @@ curl -k -X GET \
 ### Create Server
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -d '{
     "serverNickname": "iqn.1994-05.com.redhat:4f9f75fac",
@@ -216,14 +216,14 @@ curl -k -X POST \
 ### Get Server HBAs
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers/5bca8018-4a14-4aa2-ba4a-789ffea4fa35/hbas"
 ```
 
 ### Add Server HBA
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -d '{ "protocol": "iSCSI", "iscsiName": "iqn.1994-05.com.redhat:4f9f75fac"}' \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/servers/5bca8018-4a14-4aa2-ba4a-789ffea4fa35/hbas"
@@ -232,7 +232,7 @@ curl -k -X POST \
 ### Get Server Paths
 ```bash
 curl -k -X GET \
-  -u "citi02:Demo@G@D!23" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/servers/{{serverId}}/paths"
 ```
@@ -240,7 +240,7 @@ curl -k -X GET \
 ### Add Server Path
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -d '{
     "hbaId": "ef838a5a-4d07-483f-a82e-33a87c86faf8",
@@ -252,7 +252,7 @@ curl -k -X POST \
 ### Delete Server Path
 ```bash
 curl -k -X DELETE \
-  -u "citi02:Demo@G@D!23" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/servers/{{serverId}}/paths/fa0e6f04-2009-4c97-9080-e336a3738178,7a32ad93-cfde-4493-83bd-4ad845235ce4"
 ```
@@ -264,7 +264,7 @@ curl -k -X DELETE \
 ### Get Ports
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/ports"
 ```
@@ -276,7 +276,7 @@ curl -k -X GET \
 ### Get Drives
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/drives"
 ```
@@ -315,7 +315,7 @@ curl -k -X POST \
 ### Get Pools
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/pools"
 ```
@@ -323,7 +323,7 @@ curl -k -X GET \
 ### Expand Pool
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{
@@ -343,7 +343,7 @@ curl -k -X POST \
 ### Get Capacity Balance
 ```bash
 curl -k -X GET \
-  -u "admin:Demo@G@D!23" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-node-capacity-settings"
 ```
@@ -360,7 +360,7 @@ curl -k -X PATCH \
 ### Get Storage Nodes
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage-nodes"
 ```
@@ -375,9 +375,9 @@ curl -k -X GET \
 ### Add Storage Node
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Expect:" \
-  -F "setupUserPassword=H1t@ch1!" \
+  -F "setupUserPassword={{password}}" \
   -F "configurationFile=@/path/to/SystemConfigurationFile.csv" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/storage-nodes"
 ```
@@ -385,16 +385,16 @@ curl -k -X POST \
 ### Add Spare Node
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{
     "faultDomainId": "f562460a-c0c5-4fa6-b102-2cb6ee1c89bc",
     "controlPortIpv4Address": "192.168.183.115",
-    "setupUserPassword": "H1t@ch1!",
+    "setupUserPassword": "{{password}}",
     "bmcName": "192.168.183.105",
-    "bmcUser": "Administrator",
-    "bmcPassword": "6SS8YPQF"
+    "bmcUser": "{{bmcUser}}",
+    "bmcPassword": "{{bmcPassword}}"
 }' \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/spare-nodes"
 ```
@@ -402,7 +402,7 @@ curl -k -X POST \
 ### Get Spare Nodes
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Expect:" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/spare-nodes"
 ```
@@ -428,7 +428,7 @@ curl -k -X POST \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
   -d '{
-    "setupUserPassword":"St0r@g3@DP!"
+    "setupUserPassword":"{{password}}"
 }' \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/storage-nodes/{{storage_node}}/actions/replace/invoke"
 ```
@@ -447,7 +447,7 @@ curl -k -X GET \
 ### Get Volumes
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes/43059b3d-797f-44ac-b5ec-e773a45bdd14"
 ```
@@ -455,7 +455,7 @@ curl -k -X GET \
 ### Create Volume on Storage Controller
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{ 
@@ -470,7 +470,7 @@ curl -k -X POST \
 ### Create Volume with Server Connections
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{ 
@@ -485,7 +485,7 @@ curl -k -X POST \
 ### Delete Volume
 ```bash
 curl -k -X DELETE \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes/{{volumeId}}"
@@ -498,7 +498,7 @@ curl -k -X DELETE \
 ### Get User Groups
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/user-groups"
 ```
@@ -506,7 +506,7 @@ curl -k -X GET \
 ### Delete User Group
 ```bash
 curl -k -X DELETE \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/user-groups/jpmcusers"
 ```
@@ -514,7 +514,7 @@ curl -k -X DELETE \
 ### Get External Authentication Server Settings
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/external-auth-server-setting"
 ```
@@ -522,7 +522,7 @@ curl -k -X GET \
 ### Upload AD Root Certificate
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -F "rootCertificate=@/path/to/cacert.pem" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/external-auth-server-root-certificates/primary1/actions/import/invoke"
@@ -531,7 +531,7 @@ curl -k -X POST \
 ### Get Users
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/users"
 ```
@@ -539,7 +539,7 @@ curl -k -X GET \
 ### Get User Authentication Settings
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/user-auth-setting"
 ```
@@ -547,7 +547,7 @@ curl -k -X GET \
 ### Add User to Groups
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
   -d '{ "userGroupIds":["SystemAdministrators"] }' \
@@ -557,7 +557,7 @@ curl -k -X POST \
 ### Set External Authentication Server
 ```bash
 curl -k -X PATCH \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
   -d '{
@@ -570,7 +570,7 @@ curl -k -X PATCH \
         "isStartTlsEnabled": false,
         "baseDn": "DC=ecoe,DC=local",
         "bindDn": "CN=JPMC Service Account,CN=Users,DC=ecoe,DC=local",
-        "bindDnPassword": "jpmc2024p0c",
+        "bindDnPassword": "{{bindDnPassword}}",
         "userIdAttribute": "sAMAccountName",
         "userTreeDn": "CN=Users,DC=acoe,DC=local",
         "userObjectClass": "user",
@@ -585,7 +585,7 @@ curl -k -X PATCH \
 ### Set User Authentication Settings
 ```bash
 curl -k -X PATCH \
-  -u "admin:hsds-admin" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{
@@ -617,17 +617,17 @@ curl -k -X PATCH \
 ### Create User
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
-  -d '{ "userId":"FrankHayer", "password":"unentitledunderproduced71!", "userGroupIds":["SystemAdministrators"] }' \
+  -d '{ "userId":"FrankHayer", "password":"{{password}}", "userGroupIds":["SystemAdministrators"] }' \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/users"
 ```
 
 ### Delete User
 ```bash
 curl -k -X DELETE \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/users/{{vpsUser}}"
@@ -636,20 +636,20 @@ curl -k -X DELETE \
 ### Change User Password
 ```bash
 curl -k -X PATCH \
-  -u "admin:Passw0rd!23" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
-  -d '{"currentPassword":"Passw0rd!23", "newPassword":"St0r@g3@DP!"}' \
+  -d '{"currentPassword":"{{currentPassword}}", "newPassword":"{{newPassword}}"}' \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/users/admin/password"
 ```
 
 ### Reset Expired User Password
 ```bash
 curl -k -X PATCH \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
-  -d '{"currentPassword":"hsds-admin", "newPassword":"H1t@ch1!"}' \
+  -d '{"currentPassword":"{{currentPassword}}", "newPassword":"{{newPassword}}"}' \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/users/admin/password"
 ```
 
@@ -731,7 +731,7 @@ curl -k -X PATCH \
 ### Create User Group for VPS
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{
@@ -762,7 +762,7 @@ curl -k -X POST \
 ### Create Volume on VPS
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -H "Expect:" \
   -d '{ 
@@ -777,10 +777,10 @@ curl -k -X POST \
 ### Change VPS Admin Password
 ```bash
 curl -k -X PATCH \
-  -u "admin:Passw0rd!23" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   -H "Content-Type: application/json" \
-  -d '{"currentPassword":"Passw0rd!23", "newPassword":"St0r@g3@DP!"}' \
+  -d '{"currentPassword":"{{currentPassword}}", "newPassword":"{{newPassword}}"}' \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/users/admin/password"
 ```
 
@@ -799,7 +799,7 @@ curl -k -X GET \
 ### Get Software Update File
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/storage/software-update-file"
 ```
@@ -807,21 +807,21 @@ curl -k -X GET \
 ### Get Fault Sets
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/fault-sets"
 ```
 
 ### Get Fault Domains
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/fault-domains"
 ```
 
 ### Get Protection Domains (Volumes)
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/volumes"
 ```
@@ -837,7 +837,7 @@ curl -k -X GET \
 ### Get Dump Status
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/dump-status"
 ```
@@ -845,7 +845,7 @@ curl -k -X GET \
 ### Download Dump File
 ```bash
 curl -k -X GET \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/dump-file/download"
 ```
@@ -853,7 +853,7 @@ curl -k -X GET \
 ### Create Dump File
 ```bash
 curl -k -X POST \
-  -u "admin:St0r@g3@DP!" \
+  -u "{{username}}:{{password}}" \
   -H "Authorization: Session {{token}}" \
   "https://{{server}}/ConfigurationManager/simple/v1/objects/dump-file/actions/create-file/invoke"
 ```
@@ -871,7 +871,7 @@ curl -k -X POST \
 ### Create System Configuration File
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Length: 0" \
   -H "Accept: application/json" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/configuration-file/actions/create/invoke"
@@ -880,7 +880,7 @@ curl -k -X POST \
 ### Download System Configuration File
 ```bash
 curl -k -X GET \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Length: 0" \
   "https://192.168.183.121/ConfigurationManager/simple/v1/objects/configuration-file/download"
 ```
@@ -888,7 +888,7 @@ curl -k -X GET \
 ### Upload Software Update
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: multipart/form-data" \
   -H "Expect:" \
   -F "softwareUpdateFile=@/path/to/hsds-update-01150040-0212.tar" \
@@ -898,7 +898,7 @@ curl -k -X POST \
 ### Invoke Software Update
 ```bash
 curl -k -X POST \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Content-Type: application/json" \
   -d '{
     "mode": "Non-disruptive"
@@ -909,7 +909,7 @@ curl -k -X POST \
 ### Transfer Software Update File
 ```bash
 curl -k -X POST \
-  -u "admin:password" \
+  -u "{{username}}:{{password}}" \
   -H "content-type: multipart/form-data" \
   -H "Expect:" \
   -H "Authorization: Session {{token}}" \
@@ -924,7 +924,7 @@ curl -k -X POST \
 ### Enable Encryption Environment
 ```bash
 curl -k -X PATCH \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
@@ -936,7 +936,7 @@ curl -k -X PATCH \
 ### Enable Pool Encryption
 ```bash
 curl -k -X PATCH \
-  -u "admin:H1t@ch1!" \
+  -u "{{username}}:{{password}}" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
